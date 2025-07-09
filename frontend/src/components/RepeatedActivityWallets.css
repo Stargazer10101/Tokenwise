@@ -1,0 +1,78 @@
+.repeated-activity-wallets {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  background-color: var(--card-background, #242424);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #444);
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color, #444);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color, #646cff);
+}
+
+.wallets-list {
+  width: 100%;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.wallets-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color, #444);
+  color: var(--text-color, #fff);
+  background: none;
+}
+
+.wallets-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.wallet-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color, #444);
+  transition: background-color 0.2s;
+}
+
+.wallet-item:last-child {
+  border-bottom: none;
+}
+
+.wallet-item:hover {
+  background-color: rgba(100, 108, 255, 0.05);
+}
+
+.address {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 16px;
+}
+
+.activity {
+  min-width: 120px;
+  text-align: right;
+  color: #aaa;
+}

@@ -1,0 +1,89 @@
+.top-holders {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  background-color: var(--card-background, #242424);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #444);
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color, #444);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color, #646cff);
+}
+
+.holders-list {
+  width: 100%;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.holders-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color, #444);
+  color: var(--text-color, #fff);
+  background: none;
+}
+
+.holders-container {
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.holder-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color, #444);
+  transition: background-color 0.2s;
+}
+
+.holder-item:last-child {
+  border-bottom: none;
+}
+
+.holder-item:hover {
+  background-color: rgba(100, 108, 255, 0.05);
+}
+
+.rank {
+  color: #aaa;
+  font-weight: bold;
+  min-width: 60px;
+  text-align: right;
+}
+
+.address {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 16px;
+}
+
+.balance {
+  color: #4CAF50;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: right;
+}

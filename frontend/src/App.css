@@ -1,0 +1,106 @@
+:root {
+  --background-color: #1a1a1a;
+  --card-background: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --border-color: #444;
+  --accent-color: #646cff;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  
+}
+
+.App {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.card h2 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.table-container {
+  margin-top: 2rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  padding: 0;
+  border: 1px solid var(--border-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.filters input, .filters button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: #333;
+  color: var(--text-color);
+}
+
+.filters button {
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-weight: bold;
+  border-color: var(--accent-color);
+}
+
+.loader {
+  font-size: 1.5rem;
+  margin-top: 5rem;
+}

@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+frontend/.env
+backend/.env
+
+# Dependency folders
+frontend/node_modules/
+backend/node_modules/
+
+# Vite build and cache
+frontend/dist/
+frontend/.vite/
+
+# TypeScript build output (if any)
+frontend/tsconfig.tsbuildinfo
+backend/tsconfig.tsbuildinfo
+
+# TypeScript backend build output
+backend/dist/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS swap files
+*.swp
+*.swo
+
+# Optional: coverage/test output
+coverage/
