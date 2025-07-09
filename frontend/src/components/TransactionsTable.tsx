@@ -45,21 +45,19 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({ transactions, onF
         </FormControl>
         <button onClick={handleExportClick}>Export</button>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Signature</th>
-            <th>Timestamp</th>
-            <th>Wallet</th>
-            <th>Type</th>
-            <th>Protocol</th>
-            <th>Token Amount</th>
-            <th>SOL/USDC Amount</th>
-          </tr>
-        </thead>
-      </table>
       <div className="transactions-table-scroll">
         <table>
+          <thead>
+            <tr>
+              <th>Signature</th>
+              <th>Timestamp</th>
+              <th>Wallet</th>
+              <th>Type</th>
+              <th>Protocol</th>
+              <th>Token Amount</th>
+              <th>SOL/USDC Amount</th>
+            </tr>
+          </thead>
           <tbody>
             {transactions.map((tx) => (
               <tr key={tx.signature}>
