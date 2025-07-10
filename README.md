@@ -131,7 +131,7 @@ node discoverHolders.js```
 ```
 npm run dev
 ```
-This will get the API server running on http://localhost:3001
+This will get the API server running on `http://localhost:3001`
 
 ```
 # In a separate terminal
