@@ -30,17 +30,17 @@ The backend is built as a set of decoupled services, ensuring stability, scalabi
 
 ### 2. The Monitor (`monitorTransactions.js`)
 
+Smart Wallet Polling & Transaction Processor
 This is the core service, built using a robust **Polling Architecture** to ensure stability and control over API usage.
 
--   **Dual-Loop Design:** The service operates with two independent loops:
-    -   **The Fetcher**: A slow, deliberate loop that runs every 20 seconds. It iterates through the 60 wallets, fetches new transaction signatures since its last check, and adds them to a queue. This approach is highly stable and avoids WebSocket firehose issues.
-    -   **The Processor**: A fast, continuous loop that runs every 100-150ms. It takes one signature from the queue, fetches the full transaction details, and processes it.
--   **Precision Rate Limiting**: A central `RateLimiter` class acts as a gatekeeper for **all** API calls to Helius. It guarantees that the combined RPC usage of both the fetcher and processor never exceeds a safe limit (e.g., 8 requests per second), permanently solving `429` errors.
--   **Data Parsing & Enrichment**: For each relevant transaction, the service:
-    -   Determines the transaction type (buy/sell) by analyzing pre- and post-token balances.
-    -   Identifies the trading protocol by inspecting log messages.
-    -   Calculates the amount of the token traded and the corresponding quote currency amount (SOL, USDC, etc.).
--   **Database Storage**: Inserts the clean, structured data into the `transactions` table for historical analysis and API access.
+- Dynamically classifies wallets as active, moderate, or inactive based on recent transaction history.
+- Polls wallets at different intervals depending on their activity level.
+- Fetches new transaction signatures and pushes them into a priority queue.
+- Processes transactions using a rate-limited pipeline, detecting buy/sell activity of the target token.
+- Identifies the DeFi protocol involved (e.g., Jupiter, Orca, Raydium) using heuristics.
+- Efficiently stores structured transaction data in a PostgreSQL database.
+
+This approach ensures scalable, rate-limit-respecting, and high-signal transaction monitoring across the Solana network.
 
 ---
 
