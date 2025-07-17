@@ -4,6 +4,11 @@
 
 This project was built to fulfill the requirements of the NPC assignment, demonstrating a robust backend architecture for data indexing and processing.
 
+## 🚀 Live Demo
+
+The project is live at:  
+👉 [http://13.61.196.0/]()
+
 ---
 
 ## 🎯 Project Objectives
