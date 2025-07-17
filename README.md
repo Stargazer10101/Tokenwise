@@ -7,7 +7,7 @@ This project was built to fulfill the requirements of the NPC assignment, demons
 ## 🚀 Live Demo
 
 The project is live at:  
-👉 [http://13.61.196.0/]()
+👉 [Dashboard](http://13.61.196.0/)
 
 ---
 
